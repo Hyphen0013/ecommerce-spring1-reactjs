@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Cart from "./customer/components/cart/Cart";
+import Checkout from "./customer/components/checkout/Checkout";
+import OrderSummary from "./customer/components/checkout/OrderSummary";
+import Footer from "./customer/components/footer/Footer";
+import Navigation from "./customer/components/navigation/Navigation";
+import Order from "./customer/components/order/Order";
+import OrderDetails from "./customer/components/order/OrderDetails";
+import ProductDetails from "./customer/components/productDetails/ProductDetails";
+import Product from "./customer/components/products/Product";
+import CustomerRoutes from "./customer/components/routers/CustomerRoutes";
+import HomePage from "./customer/pages/homePage/HomePage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+
+      <Router>
+        <Routes>
+          <Route path="/*" element={<CustomerRoutes />} />
+        </Routes>
+      </Router>
+
     </div>
   );
 }
